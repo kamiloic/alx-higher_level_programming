@@ -27,8 +27,8 @@ void print_python_bytes(PyObject *p)
 	if (size > 0)
 	{
 		printf("  trying string: %s\n", str);
-		printf("  first 10 bytes: ");
-		for (i = 0; i < size && i < 10; ++i)
+		printf("  first %ld bytes: ", size <= 10 ? size + 1 : 10);
+		for (i = 0; i <= size && i < 10; ++i)
 			printf("%02x ", (unsigned char)str[i]);
 		printf("\n");
 	}
