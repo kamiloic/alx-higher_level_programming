@@ -29,7 +29,7 @@ void print_python_bytes(PyObject *p)
 		printf("  trying string: %s\n", str);
 		printf("  first %ld bytes: ", size <= 10 ? size + 1 : 10);
 		for (i = 0; i <= size && i < 10; ++i)
-			printf("%02x ", (unsigned char)str[i]);
+			printf("%02x%s", (unsigned char)str[i], (i == size || i == 9) ? "" : " ");
 		printf("\n");
 	}
 }
