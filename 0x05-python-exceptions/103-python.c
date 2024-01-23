@@ -88,12 +88,12 @@ void print_python_list(PyObject *p)
 	for (i = 0; i < size; ++i)
 	{
 		item = PyList_GetItem(p, i);
-		printf("Element %zd: %s\n", i, Py_TYPE(item)->tp_name);
+		printf("Element %zd: %s\n", i, item->ob_type->tp_name);
 
-		if (strcmp(Py_TYPE(item)->tp_name, "str") == 0)
+		if (strcmp(item->ob_type->tp_name, "str") == 0)
 			print_python_bytes(item);
 
-		if (strcmp(Py_TYPE(item)->tp_name, "float") == 0)
+		if (strcmp(item->ob_type->tp_name, "float") == 0)
 			print_python_float(item);
 	}
 }
