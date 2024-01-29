@@ -1,4 +1,12 @@
 #!/usr/bin/python3
+"""Module representing a Square with size and position.
+
+Attributes:
+    None
+
+Classes:
+    Square: Represents a square with a given size and position.
+"""
 
 class Square:
     """Represents a square with a given size and position.
