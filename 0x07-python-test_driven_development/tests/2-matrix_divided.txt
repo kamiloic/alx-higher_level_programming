@@ -1,0 +1,104 @@
+===========================
+How to Use 2-matrix_divided.py
+===========================
+
+
+
+Usage
+=====
+
+``matrix_divided(matrix, div)``` returns a matrix with all elements divided by div
+
+::
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = []
+    >>> matrix_divided(matrix, 2)
+    []
+
+The function should work for empty matrix
+::
+
+::
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, 2)
+    [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+
+The function should work for matrix [[1, 2, 3], [4, 5, 6]]
+::
+
+::
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+
+The function raise ZeroDivisionError when div == 0
+::
+
+
+::
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [[1, 2, 3], [4, 5, "6"]]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+The function raise TypeError when element is not an int
+::
+
+::
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [[1, 2, 3], [4, 5]]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+The function raise TypeError when rows of the matrix are not of same size
+::
+
+::
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [[], []]
+    >>> matrix_divided(matrix, 2)
+    [[], []]
+
+The function should work for a matrix with empty rows
+::
+
+::
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [[0], [0]]
+    >>> matrix_divided(matrix, 2)
+    [[0.0], [0.0]]
+
+The function should work for a matrix with zeros
+::
+
+::
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    >>> matrix_divided(matrix, -2)
+    [[-0.5, -1.0, -1.5], [-2.0, -2.5, -3.0], [-3.5, -4.0, -4.5]]
+
+The function should work for a negative divisor
+::
+
+::
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [[1.1, 2.2, 3.3], [4.4, 5.5, 6.6]]
+    >>> matrix_divided(matrix, 2)
+    [[0.55, 1.1, 1.65], [2.2, 2.75, 3.3]]
+
+The function should work for a matrix with floating-point numbers and round to two decimal places
+::
