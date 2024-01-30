@@ -6,6 +6,7 @@ Methods:
     say_my_name - Prints the provided name.
 """
 
+
 def say_my_name(first_name, last_name=""):
     """
     Prints the provided name.
@@ -19,7 +20,7 @@ def say_my_name(first_name, last_name=""):
 
     Example:
     ::
-    
+
         >>> say_my_name("John", "Doe")
         My name is John Doe
 

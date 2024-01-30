@@ -6,11 +6,14 @@ Attributes:
 
 Methods:
     - divide_num_by(num, div): Divide a number by another number.
-    - has_same_row_size(matrix): Check if all rows in the matrix have the same size.
-    - matrix_divided(matrix, div): Divide each element in the matrix by a divisor.
+    - has_same_row_size(matrix): Check if all rows in the matrix
+    have the same size.
+    - matrix_divided(matrix, div): Divide each element in the
+    matrix by a divisor.
 """
 
-error_message_type = "matrix must be a matrix (list of lists) of integers/floats"
+error_message_type = "matrix must be a matrix (list of lists)\
+    of integers/floats"
 
 
 def divide_num_by(num, div):
@@ -77,7 +80,8 @@ def matrix_divided(matrix, div):
     - div: The divisor (an integer or float).
 
     Returns:
-    - A new matrix with each element divided by div, rounded to 2 decimal places.
+    - A new matrix with each element divided by div,
+    rounded to 2 decimal places.
 
     Raises:
     - TypeError: If matrix is not a list of lists.
