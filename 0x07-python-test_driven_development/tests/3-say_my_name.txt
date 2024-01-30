@@ -1,0 +1,46 @@
+=======================
+How to Use say_my_name.py
+=======================
+
+Usage
+=====
+
+``say_my_name(first_name, last_name="")``` prints the provided names
+
+::
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("John", "Doe")
+    My name is John Doe
+
+The function should work for both first name and last name provided
+::
+
+::
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("John")
+    My name is John 
+
+The function should work for only first name provided
+::
+
+::
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name(123, "Doe")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+The function raises TypeError when first_name is not a string
+::
+
+::
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("John", 123)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+The function raises TypeError when last_name is not a string
+::
