@@ -38,13 +38,13 @@ True
 18-answer.txt
 [1, 2, 3]
 20-answer.txt
-True
+Yes
 21-answer.txt
-True
+Yes
 22-answer.txt
-False
+No
 23-answer.txt
-True
+Yes
 24-answer.txt
 True
 25-answer.txt
