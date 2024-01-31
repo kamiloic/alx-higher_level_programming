@@ -1,0 +1,79 @@
+# Test Indentation function
+Prints a text with 2 new lines after each of these characters: ., ? and :
+
+# Parameters:
+- text (str): String to be processed
+
+# Raises:
+- TypeError: text is not str
+
+# Returns:
+- None
+
+
+## Test Case 01 - Raises TypeError when no argument is passed
+
+    >>> text_indentation = __import__("5-text_indentation").text_indentation
+    >>> text_indentation(5)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+## Test Case 02 - Print Exactly the same text
+
+    >>> text_indentation("Hello There")
+    Hello There
+
+## Test Case 03 - Print nothing when an empty string is passed
+
+    >>> text_indentation("")
+    
+## Test Case 04 - Print nothing when empty spaces are passed
+
+    >>> text_indentation("      ")
+    
+
+## Test Case 05 - Don't print leading whitespace
+
+    >>> text_indentation(" Hi")
+    Hi
+
+## Test Case 06 - Don't print trailing whitespace
+
+    >>> text_indentation("There ")
+    There
+    
+## Test Case 07 - Don't print leading whitespaces
+
+    >>> text_indentation("  Hi")
+    Hi
+    
+## Test Case 08 - Don't print trailing whitespaces
+
+    >>> text_indentation("There   ")
+    There
+    
+## Test Case 09 - Don't print whitespace in the beginning and end
+
+    >>> text_indentation("  Hi There   ")
+    Hi There
+    
+## Test Case 10 - Don't print whitespaces in the beginning and end
+
+    >>> text_indentation("  Hi There?   ")
+    Hi There?
+    <BLANKLINE>
+
+## Test Case 11 - Print two return characters when char ? found
+
+    >>> text_indentation("  Hi There: How are you.   ")
+    Hi There:
+    <BLANKLINE>
+    How are you.
+    <BLANKLINE>
+
+## Test Case 12 - Print two return characters when char . found
+
+    >>> text_indentation("  Hi There. Man   ")
+    Hi There.
+    <BLANKLINE>
+    Man
