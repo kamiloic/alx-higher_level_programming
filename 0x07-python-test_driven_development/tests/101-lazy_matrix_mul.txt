@@ -1,0 +1,32 @@
+# Test Lazy matrix multiplication function
+Multiplies 2 matrices by using the module NumPy
+
+# Parameters:
+    - m_a: First matrix
+	- m_b: Second matrix
+
+# Raises:
+- TypeError: text is not str
+
+# Returns:
+- Product of both matrices
+
+
+## Test Case 01
+
+    >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+    >>> print(lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
+    [[ 7 10]
+     [15 22]]
+
+## Test Case 02
+
+    >>> print(lazy_matrix_mul([[1, 2]], [[3, 4], [5, 6]]))
+    [[13 16]]
+
+
+## Test Case 03
+
+    >>> print(lazy_matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]]))
+    [[19 22]
+     [43 50]]
