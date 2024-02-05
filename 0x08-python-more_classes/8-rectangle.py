@@ -128,8 +128,11 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
         ch = self.print_symbol
-        row = str(ch) * self.width + '\n'
-        return (row * self.height).removesuffix("\n")
+        str_repr = ""
+        row = str(ch) * self.width
+        for i in range(self.height):
+            str_repr += row + ("" if i == self.height - 1 else "\n")
+        return str_repr
 
     def __print__(self):
         return self.__str__()
