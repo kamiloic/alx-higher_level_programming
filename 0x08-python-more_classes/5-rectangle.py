@@ -91,6 +91,8 @@ class Rectangle:
         >>> new.perimeter()
         0
         """
+        if self.width == 0 or self.height == 0:
+            return 0
         return (self.__width + self.__height) * 2
 
     def str(self):
