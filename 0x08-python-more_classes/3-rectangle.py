@@ -130,5 +130,22 @@ class Rectangle:
         row = str(ch) * self.width + '\n'
         return (row * self.height).removesuffix("\n")
 
+    def __repr__(self):
+        """Return a string representation of the rectangle."""
+        return f"<3-rectangle.Rectangle object at {hex(id(self))}>"
+
     def __print__(self):
         return self.__str__()
+
+my_rectangle = Rectangle(2, 4)
+print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+
+print(str(my_rectangle))
+print(repr(my_rectangle))
+
+print("--")
+
+my_rectangle.width = 10
+my_rectangle.height = 3
+print(my_rectangle)
+print(repr(my_rectangle))

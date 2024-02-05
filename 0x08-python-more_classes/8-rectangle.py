@@ -136,7 +136,7 @@ class Rectangle:
 
     def __repr__(self):
         """Return a string representation of the rectangle."""
-        return f"Rectangle({self.__width}, {self.__height})"
+        return f"<3-rectangle.Rectangle object at {hex(id(self))}>"
 
     def __del__(self):
         Rectangle.number_of_instances -= 1
