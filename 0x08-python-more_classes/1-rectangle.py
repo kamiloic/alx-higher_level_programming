@@ -43,7 +43,6 @@ class Rectangle:
         - TypeError: If width is not an integer.
         - ValueError: If width is less than 0.
         """
-        print(f"width: {width}")
         if type(width) is not int:
             raise TypeError("width must be an integer")
         if width < 0:
