@@ -125,12 +125,14 @@ class Rectangle:
             print()
 
     def __str__(self):
-        """Return a printable representation of the rectangle."""
         if self.__width == 0 or self.__height == 0:
             return ""
-        ps = self.print_symbol
-        return str(ps) * self.__width + "\n" + \
-            (str(ps) * self.__width + "\n") * (self.__height - 1)
+        ch = self.print_symbol
+        row = str(ch) * self.width + '\n'
+        return (row * self.height).removesuffix("\n")
+
+    def __print__(self):
+        return self.__str__()
 
     def __repr__(self):
         """Return a string representation of the rectangle."""

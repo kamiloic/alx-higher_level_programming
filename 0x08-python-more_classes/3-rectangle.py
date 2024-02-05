@@ -15,6 +15,7 @@ class Rectangle:
     Attributes
     - width (int): Defaults to zero
     - height (int): Defaults to zero
+    - print_symbol (char): Defaults to #
 
     Methods:
     - area: Area of therectangle
@@ -27,6 +28,7 @@ class Rectangle:
     >>> new.height
     4
     """
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         self.__width = width
@@ -121,5 +123,12 @@ class Rectangle:
                 print(print_char, end="")
             print()
 
-    def print(self):
-        self.str()
+    def __str__(self):
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        ch = self.print_symbol
+        row = str(ch) * self.width + '\n'
+        return (row * self.height).removesuffix("\n")
+
+    def __print__(self):
+        return self.__str__()
