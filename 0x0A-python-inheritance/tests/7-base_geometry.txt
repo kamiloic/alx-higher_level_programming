@@ -1,0 +1,27 @@
+>>> # Test area method
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.area()
+... except Exception as e:
+...     print(e)
+area() is not implemented
+
+>>> # Test integer_validator method with valid input
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("height", 5)
+
+>>> # Test integer_validator method with invalid input (non-integer)
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("width", "hello")
+... except TypeError as e:
+...     print(e)
+width must be an integer
+
+>>> # Test integer_validator method with invalid input (non-positive integer)
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("height", -7)
+... except ValueError as e:
+...     print(e)
+height must be greater than 0
