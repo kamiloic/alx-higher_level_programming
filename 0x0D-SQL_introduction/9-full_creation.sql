@@ -1,3 +1,4 @@
+-- Create a table second_table with id, name, and score fields and insert multiple rows
 CREATE TABLE IF NOT EXISTS second_table (
     id INT,
     name VARCHAR(256),
