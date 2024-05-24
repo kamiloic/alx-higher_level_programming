@@ -1,6 +1,3 @@
--- Use database hbtn_0d_tvshows
-USE hbtn_0d_tvshows;
-
 -- Query to list all Comedy shows
 SELECT tv_shows.title
     FROM tv_shows
